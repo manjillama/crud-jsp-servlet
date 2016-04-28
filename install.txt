@@ -1,0 +1,59 @@
+Note: modify dbconnection for username and pass for database as well for SQL port.
+
+SQL queries for creating Database.
+
+-- Database: `student_management`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_categories`
+--
+
+CREATE TABLE `tbl_categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` text NOT NULL,
+  `added_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `modified_date` timestamp NULL DEFAULT NULL,
+  `status` tinyint(4) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_categories`
+--
+
+INSERT INTO `tbl_categories` (`id`, `name`, `description`, `added_date`, `modified_date`, `status`) VALUES
+(2, 'Electronics', 'All kind of electronics, gadget available.', '2016-03-04 04:08:37', NULL, 0),
+(3, 'Books ', 'Game of thrones', '2016-03-09 07:52:42', NULL, 1),
+(4, 'Appliances', 'Italian mini closets.', '2016-03-11 05:00:08', NULL, 1),
+(5, 'Food & Beverage.', 'Lobster', '2016-03-11 05:08:36', NULL, 0),
+(6, 'Cameras and Photos', 'DSLR, Nikon ,Canon', '2016-03-11 08:00:22', NULL, 1),
+(7, 'Mens', 'Fashion!!', '2016-03-11 08:01:03', NULL, 1),
+(8, 'Woman', 'Fashion!!!', '2016-03-11 08:01:19', NULL, 1),
+(9, 'Musical Instrument & Gear', 'Guitar!!!!', '2016-03-11 08:02:37', NULL, 1),
+(10, 'Grooming', 'Razor, Make-up!!!!!', '2016-03-12 12:58:26', NULL, 1),
+(11, 'Weenit', 'Babaal!!!!', '2016-03-27 02:58:43', NULL, 0),
+(12, 'Suman', 'Suman is good!!!', '2016-03-29 04:41:11', NULL, 0),
+(13, 'Shisang', 'My MAN!!!!', '2016-04-10 05:48:45', NULL, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_categories`
+--
+ALTER TABLE `tbl_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_categories`
+--
+ALTER TABLE `tbl_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
